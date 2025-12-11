@@ -3,19 +3,15 @@ database name = db_npm_ (exp : db_2511010001_ )
 
 
 1. create tabel customers;
-
    insert data customers
 
 2. create tebel vendors
-
    insert data vendors
 
 3. create tabel products
-
    insert data products
 
 4. create tabel orderitems
-
    insert data orderitems
 
 
@@ -23,111 +19,58 @@ database name = db_npm_ (exp : db_2511010001_ )
 
 
 create table customers(
-
     cust_id int primary key auto_increment,
-
     cust_name varchar(60),
-
     cust_address varchar(100),
-
     cust_city varchar(25),
-
     cust_state varchar(2),
-
     cust_zip varchar(5),
-
     cust_country varchar(3),		
-
     cust_contact varchar(60),
-
-    cust_email varchar(100));
-
+    cust_email varchar(100)
+    );
 
 
 insert into customers(cust_name,cust_address,cust_city,cust_state,cust_zip,cust_country,cust_contact,cust_email) VALUES('Mouse House','333 Fromage Lane','Columbus','OH','43333','USA','Jerry Mouse',''),
 
-('Wascals','1 Sunny Place','Muncie','IN','42222','USA','Jim Jones','rabbit@ascally.com'),
-
-
-
-
-
 insert into customers(cust_name,cust_address,cust_city,cust_state,cust_zip,cust_country,cust_contact,cust_email) VALUES('Wascals','1 Sunny Place','Muncie','IN','42222','USA','Jim Jones','rabbit@ascally.com');
 
-
-
 insert into customers(cust_name,cust_address,cust_city,cust_state,cust_zip,cust_country,cust_contact,cust_email) VALUES('Yosemite Place','829 Riverside Drive','Phonix','AZ','88888','USA','y Sam','sam@yoemite.com');
-
-
 
 insert into customers(cust_name,cust_address,cust_city,cust_state,cust_zip,cust_country,cust_contact,cust_email) VALUES('E Fudd ','4545 53rd Street','Chicago','IL','5454','USA','E Fudd','');
 
 
-
 create table vendors(
-
 vend_id int primary key auto_increment,
-
 vend_name varchar(60),
-
 vend_address varchar(100),
-
 vend_city varchar(60),	
-
 vend_state varchar(2),
-
 vend_zip varchar(5),
-
 vend_country varchar(3)
-
 );
-
-
-
 
 
 insert into vendors(vend_name,vend_address,vend_city,vend_state,vend_zip,vend_country) VALUES('Anvils R Us','123 Main Street','Southfield','MI','48075','USA');
 
-
-
 insert into vendors(vend_name,vend_address,vend_city,vend_state,vend_zip,vend_country) VALUES('LT Supplies','500 Park Street','Anytown','OH','44333','USA');
-
-
 
 insert into vendors(vend_name,vend_address,vend_city,vend_state,vend_zip,vend_country) VALUES('ACME','555 High Street','Los Anggles','CA','90046','USA');
 
-
-
 insert into vendors(vend_name,vend_address,vend_city,vend_state,vend_zip,vend_country) VALUES('Furball Inc','1000 5th Avenue','New York','NY','11111','USA');
 
-
-
 insert into vendors(vend_name,vend_address,vend_city,vend_state,vend_zip,vend_country) VALUES('Jet Set','42 Galaxy Road','London','','','ENG');
-
-
-
-
 
 insert into vendors(vend_name,vend_address,vend_city,vend_state,vend_zip,vend_country) VALUES('Jouets Et Ours','1 Rue Amusement','Paris','','45678','FRC');
 
 
-
-
-
 CREATE TABLE products(
-
  pro_id int primary key auto_increment,
-
  vend_id int,
-
  prod_name varchar(100),
-
  prod_price int,
-
  prod_desc varchar(100),
-
  constraint fk_vend_id foreign key(vend_id) references vendors(vend_id)
-
 );
 
 
