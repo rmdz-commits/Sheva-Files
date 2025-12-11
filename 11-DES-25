@@ -106,3 +106,4 @@ constraint fk_prod_id foreign key(pro_id) references products(pro_id)
 );
 
 Insert into orderitems (order_num,order_item,quantity) values (20005,1,10),(20005,2,3),(20005,3,5),(20005,4,1),(20006,1,1),(20007,1,100),(20008,1,50),(20009,1,1),(20009,2,1),(20009,3,1),(20009,4,1);
+
