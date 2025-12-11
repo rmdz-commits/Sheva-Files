@@ -39,6 +39,10 @@ insert into customers(cust_name,cust_address,cust_city,cust_state,cust_zip,cust_
 
 insert into customers(cust_name,cust_address,cust_city,cust_state,cust_zip,cust_country,cust_contact,cust_email) VALUES('E Fudd ','4545 53rd Street','Chicago','IL','5454','USA','E Fudd','');
 
+ATAU:
+insert into customers(cust_name,cust_address,cust_city,cust_state,cust_zip,cust_country,cust_contact,cust_email) VALUES('Mouse House','333 Fromage Lane','Columbus','OH','43333','USA','Jerry Mouse',''),('Wascals','1 Sunny Place','Muncie','IN','42222','USA','Jim Jones','rabbit@ascally.com'),('Yosemite Place','829 Riverside Drive','Phonix','AZ','88888','USA','y Sam','sam@yoemite.com'),('E Fudd ','4545 53rd Street','Chicago','IL','5454','USA','E Fudd','');
+
+
 
 create table vendors(
 vend_id int primary key auto_increment,
@@ -64,6 +68,11 @@ insert into vendors(vend_name,vend_address,vend_city,vend_state,vend_zip,vend_co
 insert into vendors(vend_name,vend_address,vend_city,vend_state,vend_zip,vend_country) VALUES('Jouets Et Ours','1 Rue Amusement','Paris','','45678','FRC');
 
 
+ATAU :
+insert into vendors(vend_name,vend_address,vend_city,vend_state,vend_zip,vend_country) VALUES('Anvils R Us','123 Main Street','Southfield','MI','48075','USA'),('LT Supplies','500 Park Street','Anytown','OH','44333','USA'),('ACME','555 High Street','Los Anggles','CA','90046','USA'),('Furball Inc','1000 5th Avenue','New York','NY','11111','USA'),('Jet Set','42 Galaxy Road','London','','','ENG'),('Jouets Et Ours','1 Rue Amusement','Paris','','45678','FRC');
+
+
+
 CREATE TABLE products(
  pro_id int primary key auto_increment,
  vend_id int,
@@ -82,6 +91,9 @@ insert into products (vend_id, prod_name,prod_price,prod_desc) VALUES (1,'1 Ton 
 
 insert into products (vend_id,prod_name,prod_price,prod_desc) VALUES (3,'Detonator',13,'Detenator');
 
+ATAU :
+insert into products (vend_id,prod_name,prod_price,prod_desc) VALUES (1,'5 Ton Anvil',6,'5 ton anvil'),(1,'1 Ton Anvil',10,'1 ton anvil'),(1,'1 Ton Anvil',15,'2 ton anvil'),(3,'Detonator',13,'Detenator');
+
 
 
 CREATE TABLE orderitems(
@@ -92,3 +104,5 @@ pro_id int,
 quantity int,
 constraint fk_prod_id foreign key(pro_id) references products(pro_id)
 );
+
+Insert into orderitems (order_num,order_item,quantity) values (20005,1,10),(20005,2,3),(20005,3,5),(20005,4,1),(20006,1,1),(20007,1,100),(20008,1,50),(20009,1,1),(20009,2,1),(20009,3,1),(20009,4,1);
